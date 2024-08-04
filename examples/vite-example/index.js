@@ -1,5 +1,6 @@
 import * as monaco from 'monaco-editor'
-import EditorWorker from 'monaco-editor/esm/vs/editor/editor.worker.js?worker'
+import EditorWorker from 'monaco-editor/esm/vs/editor/editor.worker?worker'
+import HtmlWorker from 'monaco-editor/esm/vs/language/html/html.worker?worker'
 import { configureMonacoTailwindcss } from 'monaco-tailwindcss'
 import TailwindcssWorker from 'monaco-tailwindcss/tailwindcss.worker.js?worker'
 
@@ -10,6 +11,8 @@ window.MonacoEnvironment = {
         return new EditorWorker()
       case 'tailwindcss':
         return new TailwindcssWorker()
+      case 'html':
+        return new HtmlWorker()
       default:
         throw new Error(`Unknown label ${label}`)
     }
