@@ -1,5 +1,5 @@
 {
-  "name": "monaco-tailwindcss",
+  "name": "@nag5000/monaco-tailwindcss",
   "version": "0.6.1-fork.0",
   "description": "Tailwindcss integration for Monaco editor",
   "files": [
