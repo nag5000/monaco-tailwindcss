@@ -1,1 +1,3 @@
-export { deprecate as default } from './util.js'
+module.exports = function deprecate(fn: unknown): unknown {
+  return fn
+}
